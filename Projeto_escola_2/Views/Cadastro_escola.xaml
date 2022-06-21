@@ -1,0 +1,130 @@
+﻿<Window x:Class="Projeto_escola_2.Views.Cadastro_escola"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projeto_escola_2.Views"
+        mc:Ignorable="d"
+        Title="Cadastro_escola" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="119"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="#FF00EDFF">
+            <Label Content="Escola - Cadastro" FontSize="28" HorizontalAlignment="Center" FontFamily="Times New Roman" Height="44" VerticalAlignment="Top" FontWeight="Bold"/>
+
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0.82"/>
+                    <GradientStop Color="#FF00EDFF" Offset="0"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Label Content="Nome" FontSize="20" HorizontalAlignment="Left" Margin="10,10,0,0" FontFamily="Times New Roman" Height="28" VerticalAlignment="Top" FontWeight="Bold"/>
+            <TextBox x:Name="txtbox_nome" HorizontalAlignment="Left" Margin="75,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" Height="22"/>
+            <Label Content="CNPJ" FontSize="20" HorizontalAlignment="Left" Margin="10,0,0,0" FontFamily="Times New Roman" Height="32" VerticalAlignment="Center" FontWeight="Bold"/>
+            <TextBox x:Name="txtbox_cnpj" HorizontalAlignment="Left" Margin="75,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="218" Height="21"/>
+            <Label Content="Razão Social" FontSize="20" HorizontalAlignment="Left" Margin="331,11,0,0" FontFamily="Times New Roman" Height="33" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="1.004,0.518"/>
+            <TextBox x:Name="txtbox_razao" HorizontalAlignment="Left" Margin="469,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Height="22"/>
+            <Label Content="Incrição Estadual" FontSize="20" HorizontalAlignment="Left" Margin="307,0,0,0" FontFamily="Times New Roman" Height="33" VerticalAlignment="Center" FontWeight="Bold"/>
+            <TextBox x:Name="txtbox_inscriacaoestadual" HorizontalAlignment="Left" Margin="469,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="300" Height="22"/>
+            <TextBox x:Name="txt_complemento" HorizontalAlignment="Left" Margin="469,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Height="22"/>
+            <Label Content="Complemento&#xD;&#xA;&#xD;&#xA;" FontSize="20" HorizontalAlignment="Left" Margin="326,70,0,0" FontFamily="Times New Roman" Height="34" VerticalAlignment="Top" FontWeight="Bold"/>
+
+
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0.4"/>
+                        <GradientStop Color="#FF00EDFF" Offset="1"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <Label Content="Informações Publicas" FontSize="20" FontFamily="Times New Roman" Height="44" FontWeight="Bold" Margin="100,0,100,0"/>
+                <Label Content="Tipo:" FontSize="15" FontFamily="Times New Roman" Height="44" FontWeight="Bold" Margin="20,-20,330,0"/>
+                <RadioButton x:Name="rd_publico" Content="Pública" FontSize="15" Width="100" Margin="-200,-20,0,0"/>
+                <RadioButton x:Name="rd_prive" Content="Privada" FontSize="15" Width="100" Margin="200,-17,0,0"/>
+                <Label Content="Data Criação:" FontSize="15" FontFamily="Times New Roman" Height="44" FontWeight="Bold" Margin="20,10,250,0"/>
+                <DatePicker x:Name="dp_data" Margin="0,-20,0,0" Width="300"/>
+                <Label Content="Responsável:" FontSize="15" FontFamily="Times New Roman" Height="25" FontWeight="Bold" Margin="20,10,250,0" FontStyle="Normal"/>
+                <Label Content="Nome" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="20,0,330,0"/>
+                <Label Content="Telefone&#xD;&#xA;" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="200,-30,30,0"/>
+                <TextBox x:Name="txt_responsavel" TextWrapping="Wrap" Width="120" Margin="-230,0,0,0"/>
+                <TextBox x:Name="txt_telefoneres" TextWrapping="Wrap" Width="120" Margin="150,-19,0,0"/>
+
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" >
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0.4"/>
+                        <GradientStop Color="#FF00EDFF" Offset="1"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <Label Content="Informações de contato" FontSize="18" FontFamily="Times New Roman" Height="44"  Margin="90,-8,90,0" Width="250" FontWeight="Bold"/>
+                <Label Content="Telefone:" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="-300,-10,0,0" Width="70"/>
+                <TextBox x:Name="txt_telefone" TextWrapping="Wrap" Width="130" Margin="-250,0,0,0"/>
+                <Label Content="Rua:" FontSize="15" FontFamily="Times New Roman" Height="27" FontWeight="Bold" Margin="-300,0,0,0" Width="58"/>
+                <TextBox x:Name="txt_rua" TextWrapping="Wrap" Width="213" Margin="-160,0,0,0"/>
+                <Label Content="Bairro:" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="-300,0,0,0" Width="70"/>
+                <TextBox x:Name="txt_bairro" TextWrapping="Wrap" Width="120" Margin="-250,0,0,0"/>
+                <Label Content="CEP:" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="-300,0,0,0" Width="60"/>
+                <TextBox x:Name="txt_cep" TextWrapping="Wrap" Width="120" Margin="-250,-10,0,0"/>
+                <Label Content="Email:" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="0,-330,0,0" Width="77"/>
+                <TextBox x:Name="txt_email" TextWrapping="Wrap" Width="185" Margin="100,-289,0,0" Height="19"/>
+                <Label Content="N°:" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="190,-240,0,0" Width="60"/>
+                <TextBox x:Name="txt_numero" TextWrapping="Wrap" Width="88" Margin="200,-190,0,0" Height="19"/>
+                <Label Content="Cidade:" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="50,-139,0,0" Width="60"/>
+                <TextBox x:Name="txt_cidade" TextWrapping="Wrap" Width="171" Margin="130,-100,0,0" Height="19"/>
+                <Label Content="Estado:" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="50,-55,0,0" Width="60"/>
+                <ComboBox x:Name="cb_estado" Width="171" Margin="130,-20,0,0" Height="19">
+                    <ComboBoxItem>AC</ComboBoxItem>
+                    <ComboBoxItem>AL</ComboBoxItem>
+                    <ComboBoxItem>AP</ComboBoxItem>
+                    <ComboBoxItem>AM</ComboBoxItem>
+                    <ComboBoxItem>BA</ComboBoxItem>
+                    <ComboBoxItem>CE</ComboBoxItem>
+                    <ComboBoxItem>DF</ComboBoxItem>
+                    <ComboBoxItem>ES</ComboBoxItem>
+                    <ComboBoxItem>GO</ComboBoxItem>
+                    <ComboBoxItem>MA</ComboBoxItem>
+                    <ComboBoxItem>MT</ComboBoxItem>
+                    <ComboBoxItem>MS</ComboBoxItem>
+                    <ComboBoxItem>MG</ComboBoxItem>
+                    <ComboBoxItem>PA</ComboBoxItem>
+                    <ComboBoxItem>PB</ComboBoxItem>
+                    <ComboBoxItem>PR</ComboBoxItem>
+                    <ComboBoxItem>PE</ComboBoxItem>
+                    <ComboBoxItem>PI</ComboBoxItem>
+                    <ComboBoxItem>RJ</ComboBoxItem>
+                    <ComboBoxItem>RN</ComboBoxItem>
+                    <ComboBoxItem>RS</ComboBoxItem>
+                    <ComboBoxItem>RO</ComboBoxItem>
+                    <ComboBoxItem>RR</ComboBoxItem>
+                    <ComboBoxItem>SC</ComboBoxItem>
+                    <ComboBoxItem>SP</ComboBoxItem>
+                    <ComboBoxItem>SE</ComboBoxItem>
+                    <ComboBoxItem>TO</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Button x:Name="bnt_salvar" Content="Salvar" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" FontFamily="Modern No. 20" FontWeight="Bold" Foreground="Black" Click="Button_Click" Background="#FF01F9FF"/>
+        </Grid>
+
+    </Grid>
+</Window>

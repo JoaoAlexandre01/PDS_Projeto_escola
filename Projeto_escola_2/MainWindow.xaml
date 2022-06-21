@@ -1,0 +1,19 @@
+﻿<Window x:Class="Projeto_escola_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projeto_escola_2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Escola-dos-Pais.jpeg"/>
+        </Grid.Background>
+        <Button x:Name="bt_cosultar_curso" Content="Consultar Curso" HorizontalAlignment="Left" Margin="564,366,0,0" VerticalAlignment="Top" Background="#FFEFD213" FontFamily="Cascadia Code SemiBold" FontSize="18" Width="210" Height="58" Foreground="#FFC31111" BorderBrush="#FFA5910B" Click="bt_cosultar_curso_Click"/>
+        <Button x:Name="bt_cadastrar_escola" Content="Cadastrar Escola" HorizontalAlignment="Left" Margin="324,285,0,0" VerticalAlignment="Top" Background="#FFEFD213" Width="210" Height="58" Click="bt_cadastrar_escola_Click" BorderBrush="#FFA5910B" FontFamily="Cascadia Code SemiBold" FontSize="18" Foreground="#FFC31111"/>
+        <Button x:Name="bt_cadastrar_curso" Content="Cadastrar Curso" HorizontalAlignment="Left" Margin="324,366,0,0" VerticalAlignment="Top" Background="#FFEFD213" Width="210" Height="58" Click="bt_cadastrar_curso_Click" BorderBrush="#FFA5910B" FontFamily="Cascadia Code SemiBold" FontSize="18" Foreground="#FFC31111"/>
+        <Button x:Name="bt_cosultar_escola" Content="Consultar Escola" HorizontalAlignment="Left" Margin="564,286,0,0" VerticalAlignment="Top" Height="58" Width="210" Click="bt_cosultar_escola_Click" FontFamily="Cascadia Code SemiBold" FontSize="18" Background="#FFEFD213" Foreground="#FFC31111"/>
+
+    </Grid>
+</Window>
